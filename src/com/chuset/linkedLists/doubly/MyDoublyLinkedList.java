@@ -1,5 +1,7 @@
 package com.chuset.linkedLists.doubly;
 
+import com.chuset.linkedLists.singly.MySinglyLinkedNode;
+
 public class MyDoublyLinkedList<E> {
 
     private MyDoublyLinkedNode<E> head;
@@ -76,6 +78,24 @@ public class MyDoublyLinkedList<E> {
         length--;
     }
 
+    public void reverse() {
+        MyDoublyLinkedNode<E> temp = null;
+        MyDoublyLinkedNode<E> current = head;
+
+        /* swap next and previous for all nodes of
+         doubly linked list */
+        while (current != null) {
+            temp = current.getPrevious();
+            current.setPrevious(current.getNext());
+            current.setNext(temp);
+            current = current.getPrevious();
+        }
+
+        if (temp != null) {
+            head = temp.getPrevious();
+        }
+    }
+
     private MyDoublyLinkedNode<E> traverseToIndex(final int index) {
         if (index >= length) {
             throw new IndexOutOfBoundsException("Index out of bounds");
@@ -140,6 +160,9 @@ public class MyDoublyLinkedList<E> {
         myDoublyLinkedList.printList();
 
         myDoublyLinkedList.remove(2);
+        myDoublyLinkedList.printList();
+
+        myDoublyLinkedList.reverse();
         myDoublyLinkedList.printList();
     }
 }
