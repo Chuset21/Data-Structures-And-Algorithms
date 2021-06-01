@@ -7,8 +7,8 @@ public class MySinglyLinkedList<E> {
     private int length;
 
     public MySinglyLinkedList(final E value) {
-        this.head = new MySinglyLinkedNode<>(value);
-        this.tail = head;
+        head = new MySinglyLinkedNode<>(value);
+        tail = head;
         length = 1;
     }
 
