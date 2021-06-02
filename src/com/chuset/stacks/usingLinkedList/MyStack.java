@@ -48,6 +48,10 @@ public class MyStack<E> {
         return top.getValue();
     }
 
+    public boolean isEmpty() {
+        return length == 0;
+    }
+
     @Override
     public String toString() {
         MySinglyLinkedNode<E> currentNode = top;

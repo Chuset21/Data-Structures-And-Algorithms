@@ -35,6 +35,10 @@ public class MyStack<E> {
         return dynamicArray.get(dynamicArray.size() - 1);
     }
 
+    public boolean isEmpty() {
+        return dynamicArray.isEmpty();
+    }
+
     @Override
     public String toString() {
         if (dynamicArray.isEmpty()) {
