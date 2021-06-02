@@ -1,6 +1,6 @@
-package com.chuset.stacks.usingLinkedList;
+package com.chuset.data_structures.stacks.usingLinkedList;
 
-import com.chuset.linkedLists.singly.MySinglyLinkedNode;
+import com.chuset.data_structures.linked_lists.singly.MySinglyLinkedNode;
 
 import java.util.EmptyStackException;
 

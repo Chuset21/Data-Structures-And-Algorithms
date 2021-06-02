@@ -1,4 +1,4 @@
-package com.chuset.linkedLists.singly;
+package com.chuset.data_structures.linked_lists.singly;
 
 public class MySinglyLinkedNode<E> {
 

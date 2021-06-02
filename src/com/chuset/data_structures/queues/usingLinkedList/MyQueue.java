@@ -1,6 +1,6 @@
-package com.chuset.queues.usingLinkedList;
+package com.chuset.data_structures.queues.usingLinkedList;
 
-import com.chuset.linkedLists.singly.MySinglyLinkedNode;
+import com.chuset.data_structures.linked_lists.singly.MySinglyLinkedNode;
 
 public class MyQueue<E> {
 

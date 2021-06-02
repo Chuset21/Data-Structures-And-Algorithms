@@ -1,6 +1,4 @@
-package com.chuset.linkedLists.doubly;
-
-import com.chuset.linkedLists.singly.MySinglyLinkedNode;
+package com.chuset.data_structures.linked_lists.doubly;
 
 public class MyDoublyLinkedList<E> {
 

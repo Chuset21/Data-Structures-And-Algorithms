@@ -1,4 +1,4 @@
-package com.chuset.stacks.usingArray;
+package com.chuset.data_structures.stacks.usingArray;
 
 import java.util.ArrayList;
 import java.util.EmptyStackException;

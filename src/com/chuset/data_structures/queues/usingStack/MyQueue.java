@@ -1,4 +1,4 @@
-package com.chuset.queues.usingStack;
+package com.chuset.data_structures.queues.usingStack;
 
 import java.util.Stack;
 

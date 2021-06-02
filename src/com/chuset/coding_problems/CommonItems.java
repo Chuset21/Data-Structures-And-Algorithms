@@ -1,4 +1,4 @@
-package com.chuset.codingProblems;
+package com.chuset.coding_problems;
 
 import java.util.Arrays;
 import java.util.HashSet;

@@ -1,4 +1,4 @@
-package com.chuset.bigO;
+package com.chuset.big_o;
 
 import java.util.Arrays;
 

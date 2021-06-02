@@ -1,4 +1,4 @@
-package com.chuset.dataStructures.arrays;
+package com.chuset.data_structures.arrays;
 
 import java.util.Arrays;
 

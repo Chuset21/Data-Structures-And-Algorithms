@@ -1,4 +1,4 @@
-package com.chuset.dataStructures.hashTables;
+package com.chuset.data_structures.hash_tables;
 
 import java.util.ArrayList;
 import java.util.List;
