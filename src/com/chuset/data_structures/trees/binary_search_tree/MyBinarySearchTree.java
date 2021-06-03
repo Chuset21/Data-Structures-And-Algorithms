@@ -67,15 +67,15 @@ public class MyBinarySearchTree<T extends Comparable<T>> {
         return toString(root, 0);
     }
 
-    private String toString(MyBinaryNode<T> node, int tabCount) {
+    private String toString(final MyBinaryNode<T> current, int tabCount) {
         final StringBuilder sb = new StringBuilder();
-        sb.append(node.getValue()).append('\n');
+        sb.append(current.getValue()).append('\n');
         tabCount++;
-        if (node.getLeft() != null) {
-            sb.append("\t".repeat(Math.max(0, tabCount))).append("Left: ").append(toString(node.getLeft(), tabCount));
+        if (current.getLeft() != null) {
+            sb.append("\t".repeat(tabCount)).append("Left: ").append(toString(current.getLeft(), tabCount));
         }
-        if (node.getRight() != null) {
-            sb.append("\t".repeat(Math.max(0, tabCount))).append("Right: ").append(toString(node.getRight(), tabCount));
+        if (current.getRight() != null) {
+            sb.append("\t".repeat(tabCount)).append("Right: ").append(toString(current.getRight(), tabCount));
         }
         return sb.toString();
     }
