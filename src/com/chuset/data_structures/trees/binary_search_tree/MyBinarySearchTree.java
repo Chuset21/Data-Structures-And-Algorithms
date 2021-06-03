@@ -21,10 +21,13 @@ public class MyBinarySearchTree<T extends Comparable<T>> {
             return false;
         }
 
-        final int comparisonResult = root.getValue().compareTo(value);
+        // If value < current.getValue()    --> comparisonResult = 1
+        // If value > current.getValue()    --> comparisonResult = -1
+        // If value == current.getValue()   --> comparisonResult = 0
+        final int comparisonResult = current.getValue().compareTo(value);
         if (comparisonResult == 0) {
             return true;
-        } else if (comparisonResult < 0) {
+        } else if (0 < comparisonResult) {
             return containsRecursive(current.getLeft(), value);
         } else {
             return containsRecursive(current.getRight(), value);
