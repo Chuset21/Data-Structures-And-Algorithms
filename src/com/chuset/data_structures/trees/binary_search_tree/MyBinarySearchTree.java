@@ -37,9 +37,9 @@ public class MyBinarySearchTree<T extends Comparable<T>> {
     public void insert(final T value) {
         if (root == null) {
             root = new MyBinaryNode<>(value);
-            return;
+        } else {
+            insert(root, value);
         }
-        insert(root, value);
     }
 
     private void insert(final MyBinaryNode<T> current, final T value) {
@@ -68,6 +68,10 @@ public class MyBinarySearchTree<T extends Comparable<T>> {
     }
 
     private String toString(final MyBinaryNode<T> current, int tabCount) {
+        if (root == null) {
+            return "";
+        }
+
         final StringBuilder sb = new StringBuilder();
         sb.append(current.getValue()).append('\n');
         tabCount++;
