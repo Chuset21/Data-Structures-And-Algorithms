@@ -5,7 +5,7 @@ public class MyBinarySearchTree<T extends Comparable<T>> {
     private MyBinaryNode<T> root;
 
     public MyBinarySearchTree(final T rootValue) {
-        this.root = new MyBinaryNode<>(rootValue);
+        root = new MyBinaryNode<>(rootValue);
     }
 
     public MyBinarySearchTree() {
@@ -34,15 +34,16 @@ public class MyBinarySearchTree<T extends Comparable<T>> {
         }
     }
 
-    public void insert(final T value) {
+    public boolean insert(final T value) {
         if (root == null) {
             root = new MyBinaryNode<>(value);
+            return true;
         } else {
-            insert(root, value);
+            return insert(root, value);
         }
     }
 
-    private void insert(final MyBinaryNode<T> current, final T value) {
+    private boolean insert(final MyBinaryNode<T> current, final T value) {
         // If value < current.getValue()    --> comparisonResult = 1
         // If value > current.getValue()    --> comparisonResult = -1
         // If the value is already there nothing should be done as you cannot insert duplicates into a BST
@@ -50,16 +51,19 @@ public class MyBinarySearchTree<T extends Comparable<T>> {
         if (0 < comparisonResult) {
             if (current.getLeft() == null) {
                 current.setLeft(new MyBinaryNode<>(value));
+                return true;
             } else {
                 insert(current.getLeft(), value);
             }
         } else if (0 > comparisonResult) {
             if (current.getRight() == null) {
                 current.setRight(new MyBinaryNode<>(value));
+                return true;
             } else {
                 insert(current.getRight(), value);
             }
         }
+        return false;
     }
 
     @Override
@@ -86,7 +90,7 @@ public class MyBinarySearchTree<T extends Comparable<T>> {
 
     public static void main(String[] args) {
         final MyBinarySearchTree<Integer> tree = new MyBinarySearchTree<>();
-        tree.insert(9);
+        System.out.println(tree.insert(9));
         tree.insert(4);
         tree.insert(20);
         System.out.println(tree.contains(20));
