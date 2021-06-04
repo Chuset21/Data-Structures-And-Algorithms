@@ -13,10 +13,10 @@ public class MyBinarySearchTree<T extends Comparable<T>> {
     }
 
     public boolean contains(final T value) {
-        return containsRecursive(root, value);
+        return contains(root, value);
     }
 
-    private boolean containsRecursive(final MyBinaryNode<T> current, final T value) {
+    private boolean contains(final MyBinaryNode<T> current, final T value) {
         if (current == null) {
             return false;
         }
@@ -28,9 +28,9 @@ public class MyBinarySearchTree<T extends Comparable<T>> {
         if (comparisonResult == 0) {
             return true;
         } else if (0 < comparisonResult) {
-            return containsRecursive(current.getLeft(), value);
+            return contains(current.getLeft(), value);
         } else {
-            return containsRecursive(current.getRight(), value);
+            return contains(current.getRight(), value);
         }
     }
 
@@ -49,21 +49,97 @@ public class MyBinarySearchTree<T extends Comparable<T>> {
         // If the value is already there nothing should be done as you cannot insert duplicates into a BST
         final int comparisonResult = current.getValue().compareTo(value);
         if (0 < comparisonResult) {
-            if (current.getLeft() == null) {
+            if (current.hasLeft()) {
+                insert(current.getLeft(), value);
+            } else {
                 current.setLeft(new MyBinaryNode<>(value));
                 return true;
-            } else {
-                insert(current.getLeft(), value);
             }
         } else if (0 > comparisonResult) {
-            if (current.getRight() == null) {
+            if (current.hasRight()) {
+                insert(current.getRight(), value);
+            } else {
                 current.setRight(new MyBinaryNode<>(value));
                 return true;
-            } else {
-                insert(current.getRight(), value);
             }
         }
         return false;
+    }
+
+    public boolean remove(final T value) {
+        if (root == null) {
+            return false;
+        }
+        return remove(root, null, value);
+    }
+
+    private boolean remove(final MyBinaryNode<T> current, final MyBinaryNode<T> parent, final T value) {
+        if (current == null) {
+            return false;
+        }
+
+        // If value < current.getValue()    --> comparisonResult = 1
+        // If value > current.getValue()    --> comparisonResult = -1
+        // If the value is already there we know that we have reached the correct parent and 'current'
+        final int comparisonResult = current.getValue().compareTo(value);
+        if (0 < comparisonResult) {
+            return remove(current.getLeft(), current, value);
+        } else if (0 > comparisonResult) {
+            return remove(current.getRight(), current, value);
+        }
+        // Now we know that we have the correct parent and 'current'
+
+        if (current.isLeaf()) {
+            replaceChildWithNewNode(parent, value, null);
+        } else if (current.hasRight() && !current.hasLeft()) {
+            replaceChildWithNewNode(parent, value, current.getRight());
+        } else if (current.hasLeft() && !current.hasRight()) {
+            replaceChildWithNewNode(parent, value, current.getLeft());
+        } else {
+            MyBinaryNode<T> successor;
+            if (current.getRight().hasLeft()) {
+                successor = findMinAndChangeRef(current.getRight(), current.getRight().getLeft());
+            } else {
+                successor = findMin(current.getRight());
+            }
+            if (parent == null) {
+                root = successor;
+            } else {
+                replaceChildWithNewNode(parent, value, successor);
+            }
+            successor.setLeft(current.getLeft());
+            if (!successor.equals(current.getRight())) {
+                successor.setRight(current.getRight());
+            }
+        }
+        return true;
+    }
+
+    private MyBinaryNode<T> findMinAndChangeRef(final MyBinaryNode<T> parent, final MyBinaryNode<T> current) {
+        if (current.hasLeft()) {
+            return findMinAndChangeRef(parent.getLeft(), current.getLeft());
+        }
+        if (current.hasRight()) {
+            parent.setLeft(current.getRight());
+        } else {
+            parent.setLeft(null);
+        }
+        return current;
+    }
+
+    private MyBinaryNode<T> findMin(final MyBinaryNode<T> current) {
+        if (current.hasLeft()) {
+            return findMin(current.getLeft());
+        }
+        return current;
+    }
+
+    private void replaceChildWithNewNode(final MyBinaryNode<T> parent, final T value, final MyBinaryNode<T> newNode) {
+        if (parent.hasLeft() && parent.getLeft().getValue().equals(value)) {
+            parent.setLeft(newNode);
+        } else {
+            parent.setRight(newNode);
+        }
     }
 
     @Override
@@ -80,7 +156,7 @@ public class MyBinarySearchTree<T extends Comparable<T>> {
         sb.append(current.getValue()).append('\n');
         tabCount++;
         if (current.getLeft() != null) {
-            sb.append("\t".repeat(tabCount)).append("Left: ").append(toString(current.getLeft(), tabCount));
+            sb.append("\t".repeat(tabCount)).append("Left:  ").append(toString(current.getLeft(), tabCount));
         }
         if (current.getRight() != null) {
             sb.append("\t".repeat(tabCount)).append("Right: ").append(toString(current.getRight(), tabCount));
@@ -93,11 +169,28 @@ public class MyBinarySearchTree<T extends Comparable<T>> {
         System.out.println(tree.insert(9));
         tree.insert(4);
         tree.insert(20);
-        System.out.println(tree.contains(20));
+        System.out.printf("The tree %s 20.%n", tree.contains(20) ? "contains" : "doesn't contain");
         tree.insert(1);
         tree.insert(6);
         tree.insert(15);
-        tree.insert(170);
+        tree.insert(97);
+        tree.insert(17);
+        System.out.println(tree);
+
+        System.out.printf("Removing 20: %s%n", tree.remove(20));
+        System.out.println(tree);
+
+        System.out.printf("Removing 4: %s%n", tree.remove(4));
+        System.out.println(tree);
+
+        tree.insert(20);
+        tree.insert(18);
+        tree.insert(10);
+        tree.insert(11);
+
+        System.out.println(tree);
+
+        System.out.printf("Removing 9: %s%n", tree.remove(9));
         System.out.println(tree);
     }
 }

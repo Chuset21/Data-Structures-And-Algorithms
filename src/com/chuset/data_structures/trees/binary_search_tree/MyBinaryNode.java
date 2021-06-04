@@ -39,4 +39,16 @@ public class MyBinaryNode<T extends Comparable<T>> {
     public void setRight(final MyBinaryNode<T> right) {
         this.right = right;
     }
+
+    public boolean hasLeft() {
+        return left != null;
+    }
+
+    public boolean hasRight() {
+        return right != null;
+    }
+
+    public boolean isLeaf() {
+        return right == null && left == null;
+    }
 }
