@@ -96,7 +96,7 @@ public class MyBinarySearchTree<T extends Comparable<T>> {
         } else if (current.hasLeft() && !current.hasRight()) {
             replaceChildWithNewNode(parent, value, current.getLeft());
         } else {
-            MyBinaryNode<T> successor;
+            final MyBinaryNode<T> successor;
             if (current.getRight().hasLeft()) {
                 successor = findMinAndChangeRef(current.getRight(), current.getRight().getLeft());
             } else {
