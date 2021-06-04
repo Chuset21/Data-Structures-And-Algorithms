@@ -144,14 +144,13 @@ public class MyBinarySearchTree<T extends Comparable<T>> {
 
     @Override
     public String toString() {
-        return toString(root, 0);
-    }
-
-    private String toString(final MyBinaryNode<T> current, int tabCount) {
         if (root == null) {
             return "";
         }
+        return String.format("Root:  %s", toString(root, 0));
+    }
 
+    private String toString(final MyBinaryNode<T> current, int tabCount) {
         final StringBuilder sb = new StringBuilder();
         sb.append(current.getValue()).append('\n');
         tabCount++;
