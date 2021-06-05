@@ -9,6 +9,11 @@
 [Stacks](https://github.com/Chuset21/Data-Structures-And-Algorithms/tree/main/src/com/chuset/data_structures/stacks)  
 [Trees](https://github.com/Chuset21/Data-Structures-And-Algorithms/tree/main/src/com/chuset/data_structures/trees)
 
+## Algorithms
+[Recursion](https://github.com/Chuset21/Data-Structures-And-Algorithms/tree/main/src/com/chuset/algorithms/recursion)  
+[Sorting](https://github.com/Chuset21/Data-Structures-And-Algorithms/tree/main/src/com/chuset/algorithms/sorting)
+
+
 ## Coding Problems
 [Common Items](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/CommonItems.java)  
 [First Recurring Character](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/FirstRecurringCharacter.java)  
