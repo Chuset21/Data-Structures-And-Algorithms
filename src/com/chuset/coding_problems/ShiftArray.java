@@ -2,7 +2,7 @@ package com.chuset.coding_problems;
 
 import java.util.Arrays;
 
-public class Shift {
+public class ShiftArray {
 
     public static void main(String[] args) {
         int[] arr = new int[]{1, 2, 3, 4, 5, 6, 7};
