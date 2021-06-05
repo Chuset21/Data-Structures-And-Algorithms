@@ -7,7 +7,7 @@
 [Linked Lists](https://github.com/Chuset21/Data-Structures-And-Algorithms/tree/main/src/com/chuset/data_structures/linked_lists)  
 [Queues](https://github.com/Chuset21/Data-Structures-And-Algorithms/tree/main/src/com/chuset/data_structures/queues)  
 [Stacks](https://github.com/Chuset21/Data-Structures-And-Algorithms/tree/main/src/com/chuset/data_structures/stacks)  
-[Trees](https://github.com/Chuset21/Data-Structures-And-Algorithms/tree/main/src/com/chuset/data_structures/trees)
+[Trees](https://github.com/Chuset21/Data-Structures-And-Algorithms/tree/main/src/com/chuset/data_structures/trees) ([dictionary.txt](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/dictionary.txt) is used to test the Trie data structure to act as a Dictionary)
 
 ## Algorithms
 [Recursion](https://github.com/Chuset21/Data-Structures-And-Algorithms/tree/main/src/com/chuset/algorithms/recursion)  
