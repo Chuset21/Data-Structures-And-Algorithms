@@ -7,3 +7,11 @@
 [Queues](https://github.com/Chuset21/Data-Structures-And-Algorithms/tree/main/src/com/chuset/data_structures/queues)  
 [Stacks](https://github.com/Chuset21/Data-Structures-And-Algorithms/tree/main/src/com/chuset/data_structures/stacks)  
 [Trees](https://github.com/Chuset21/Data-Structures-And-Algorithms/tree/main/src/com/chuset/data_structures/trees)
+
+## Coding Problems
+[Common Items](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/CommonItems.java)  
+[First Recurring Character](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/FirstRecurringCharacter.java)  
+[Merge Sorted Arrays](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/MergeSortedArrays.java)  
+[Move Zeroes](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/MoveZeroes.java)  
+[Reverse String](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/ReverseString.java)  
+[Shift Array](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/ShiftArray.java)
