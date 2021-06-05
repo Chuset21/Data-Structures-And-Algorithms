@@ -25,7 +25,6 @@ public class ReverseString {
         if (string == null || string.length() < 2) {
             return string;
         }
-
         return new StringBuilder(string).reverse().toString();
     }
 }
