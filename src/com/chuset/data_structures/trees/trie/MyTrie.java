@@ -1,5 +1,6 @@
 package com.chuset.data_structures.trees.trie;
 
+import java.io.*;
 import java.util.Locale;
 
 public class MyTrie {
@@ -18,6 +19,7 @@ public class MyTrie {
         delete(root, word.toLowerCase(Locale.ROOT), 0);
     }
 
+    // The boolean in this is used for the method to know what to do, the return from the original call is meaningless
     private boolean delete(final MyTrieNode current, final String word, final int index) {
         if (index == word.length()) {
             if (!current.isEndOfWord()) {
@@ -61,18 +63,21 @@ public class MyTrie {
         current.setEndOfWord(true);
     }
 
-    public static void main(String[] args) {
+    public void insertFromFile(final File file) throws IOException {
+        final BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
+        String row;
+        while ((row = bufferedReader.readLine()) != null) {
+            this.insert(row);
+        }
+    }
+
+    public static void main(String[] args) throws IOException {
         final MyTrie dictionary = new MyTrie();
         System.out.printf("The dictionary is%s empty.%n", dictionary.isEmpty() ? "" : "n't");
 
-        dictionary.insert("Joe");
-        dictionary.insert("Joseph");
-        dictionary.insert("lola");
-        System.out.printf("The dictionary is%s empty.%n", dictionary.isEmpty() ? "" : "n't");
+        dictionary.insertFromFile(new File("dictionary.txt"));
 
-        dictionary.insert("hitch hiking");
-        dictionary.insert("Road");
-        dictionary.insert("trip");
+        System.out.printf("The dictionary is%s empty.%n", dictionary.isEmpty() ? "" : "n't");
         System.out.printf("The dictionary %s \"trip\".%n",
                 dictionary.contains("trip") ? "contains" : "doesn't contain");
 
