@@ -2,18 +2,18 @@ package com.chuset.coding_problems;
 
 import java.util.Arrays;
 
-public class Rotate {
+public class Shift {
 
     public static void main(String[] args) {
         int[] arr = new int[]{1, 2, 3, 4, 5, 6, 7};
         Integer[] arr2 = new Integer[]{1, 2, 3, 4, 5, 6, 7};
-        rotateRight(arr, 3);
-        rotateBetter(arr2, 3, true);
+        shiftRight(arr, 3);
+        shiftBetter(arr2, 3, true);
         System.out.println(Arrays.toString(arr));
         System.out.println(Arrays.toString(arr2));
     }
 
-    private static void rotateRight(final int[] items, int k) {
+    private static void shiftRight(final int[] items, int k) {
         if (items == null || items.length < 2) {
             return;
         }
@@ -40,7 +40,7 @@ public class Rotate {
         }
     }
 
-    private static <T> void rotateBetter(final T[] items, int k, final boolean rotateRight) {
+    private static <T> void shiftBetter(final T[] items, int k, final boolean rotateRight) {
         if (items == null || items.length < 2) {
             return;
         }
