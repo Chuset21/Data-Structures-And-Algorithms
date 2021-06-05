@@ -18,12 +18,12 @@ public class FirstRecurringCharacter {
             Arrays.setAll(array1, i -> s.nextLong());
         }
 
-        long startTime = System.nanoTime();
+        final long startTime = System.nanoTime();
         System.out.format("Solution result: %s with time of - %d%n",
                 firstRecurringItem(array1), (System.nanoTime() - startTime));
     }
 
-    private static <T> T firstRecurringItem(T[] array) {
+    private static <T> T firstRecurringItem(final T[] array) {
         final Set<T> set = new HashSet<>();
         for (final T t : array) {
             if (set.contains(t)) {
