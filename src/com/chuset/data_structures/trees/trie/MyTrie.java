@@ -57,13 +57,15 @@ public class MyTrie {
     public void insert(final String word) {
         MyTrieNode current = root;
 
-        for (char letter : word.toLowerCase(Locale.ROOT).toCharArray()) {
+        for (final char letter : word.toLowerCase(Locale.ROOT).toCharArray()) {
             current = current.getChildren().computeIfAbsent(letter, c -> new MyTrieNode());
         }
         current.setEndOfWord(true);
     }
 
     public void insertFromFile(final File file) throws IOException {
+        // This is a bit slower but much easier to read
+//        new BufferedReader(new FileReader(file)).lines().forEach(this::insert);
         final BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
         String row;
         while ((row = bufferedReader.readLine()) != null) {
