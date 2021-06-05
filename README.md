@@ -2,6 +2,7 @@
 
 ## Data structures
 [Arrays](https://github.com/Chuset21/Data-Structures-And-Algorithms/tree/main/src/com/chuset/data_structures/arrays)   
+[Graphs](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/data_structures/graphs)  
 [Hash tables](https://github.com/Chuset21/Data-Structures-And-Algorithms/tree/main/src/com/chuset/data_structures/hash_tables)  
 [Linked Lists](https://github.com/Chuset21/Data-Structures-And-Algorithms/tree/main/src/com/chuset/data_structures/linked_lists)  
 [Queues](https://github.com/Chuset21/Data-Structures-And-Algorithms/tree/main/src/com/chuset/data_structures/queues)  
