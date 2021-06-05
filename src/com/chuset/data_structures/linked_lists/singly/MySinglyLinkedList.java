@@ -86,7 +86,7 @@ public class MySinglyLinkedList<E> {
     }
 
     private MySinglyLinkedNode<E> traverseToIndex(final int index) {
-        if (index >= length) {
+        if (index >= length || index < 0) {
             throw new IndexOutOfBoundsException("Index out of bounds");
         }
         MySinglyLinkedNode<E> currentNode = head;

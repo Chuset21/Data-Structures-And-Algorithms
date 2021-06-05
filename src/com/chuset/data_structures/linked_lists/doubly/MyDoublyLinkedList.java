@@ -95,7 +95,7 @@ public class MyDoublyLinkedList<E> {
     }
 
     private MyDoublyLinkedNode<E> traverseToIndex(final int index) {
-        if (index >= length) {
+        if (index >= length || index < 0) {
             throw new IndexOutOfBoundsException("Index out of bounds");
         }
 
