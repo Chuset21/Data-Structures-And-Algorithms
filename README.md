@@ -14,4 +14,4 @@
 [Merge Sorted Arrays](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/MergeSortedArrays.java)  
 [Move Zeroes](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/MoveZeroes.java)  
 [Reverse String](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/ReverseString.java)  
-[Shift](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/Shift.java)
+[Shift Array](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/ShiftArray.java)
