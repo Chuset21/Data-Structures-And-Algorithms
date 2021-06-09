@@ -33,13 +33,15 @@ public class MergeSort {
         final List<T> merged = new ArrayList<>();
         int leftIndex = 0;
         int rightIndex = 0;
-        while (leftIndex < left.size() && rightIndex < right.size()) { // Keep merging until we done with one of the sides
+        // Keep merging until we are done with one of the sides
+        while (leftIndex < left.size() && rightIndex < right.size()) {
             // <= Makes merge sort stable
             merged.add(left.get(leftIndex).compareTo(right.get(rightIndex)) <= 0 ?
                     left.get(leftIndex++) : right.get(rightIndex++));
         }
-        merged.addAll(left.subList(leftIndex, left.size())); // Merging all "leftovers" elements as is because we know they are sorted
-        merged.addAll(right.subList(rightIndex, right.size())); // Ditto
+        // Merging all "leftovers" elements as is because we know they are sorted
+        merged.addAll(left.subList(leftIndex, left.size()));
+        merged.addAll(right.subList(rightIndex, right.size()));
         return merged;
     }
 }
