@@ -41,11 +41,10 @@ public class MyTrie {
         return false;
     }
 
-    public boolean contains(String word) {
-        word = word.toLowerCase(Locale.ROOT);
+    public boolean contains(final String word) {
         MyTrieNode current = root;
-        for (int i = 0; i < word.length(); i++) {
-            final MyTrieNode node = current.getChildren().get(word.charAt(i));
+        for (final char ch : word.toLowerCase(Locale.ROOT).toCharArray()) {
+            final MyTrieNode node = current.getChildren().get(ch);
             if (node == null) {
                 return false;
             }
@@ -56,9 +55,8 @@ public class MyTrie {
 
     public void insert(final String word) {
         MyTrieNode current = root;
-
-        for (final char letter : word.toLowerCase(Locale.ROOT).toCharArray()) {
-            current = current.getChildren().computeIfAbsent(letter, c -> new MyTrieNode());
+        for (final char ch : word.toLowerCase(Locale.ROOT).toCharArray()) {
+            current = current.getChildren().computeIfAbsent(ch, c -> new MyTrieNode());
         }
         current.setEndOfWord(true);
     }
