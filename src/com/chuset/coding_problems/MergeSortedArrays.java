@@ -5,10 +5,12 @@ import java.util.Arrays;
 public class MergeSortedArrays {
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(mergeSortedArrays(new int[]{1,1,8,9,10}, new int[]{1,2,8,9,11,15,16})));
+        System.out.println(Arrays.toString(mergeSortedArrays(new
+                Integer[]{1,1,8,9,10}, new Integer[]{1,2,8,9,11,15,16})));
     }
 
-    private static int[] mergeSortedArrays(final int[] array1, final int[] array2) {
+    // Should cast the returned array to the original type as this returns an Object[]
+    private static <T extends Comparable<T>> Object[] mergeSortedArrays(final T[] array1, final T[] array2) {
         if (array1 == null || array1.length == 0) {
             return array2;
         }
@@ -17,7 +19,7 @@ public class MergeSortedArrays {
             return array1;
         }
 
-        final int[] mergedArray = new int[array1.length + array2.length];
+        final Object[] mergedArray = new Object[array1.length + array2.length];
         int index1 = 0;
         int index2 = 0;
         for (int i = 0; i < mergedArray.length; i++) {
@@ -30,7 +32,8 @@ public class MergeSortedArrays {
                 break;
             }
 
-            if (array1[index1] < array2[index2]) {
+            final int comparisonResult = array1[index1].compareTo(array2[index2]);
+            if (comparisonResult < 0) {
                 mergedArray[i] = array1[index1++];
             } else {
                 mergedArray[i] = array2[index2++];
