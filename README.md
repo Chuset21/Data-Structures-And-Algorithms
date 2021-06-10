@@ -3,7 +3,7 @@
 ## Data structures
 [Arrays](https://github.com/Chuset21/Data-Structures-And-Algorithms/tree/main/src/com/chuset/data_structures/arrays)   
 [Graphs](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/data_structures/graphs)  
-[Hash tables](https://github.com/Chuset21/Data-Structures-And-Algorithms/tree/main/src/com/chuset/data_structures/hash_tables)  
+[Hash Tables](https://github.com/Chuset21/Data-Structures-And-Algorithms/tree/main/src/com/chuset/data_structures/hash_tables)  
 [Linked Lists](https://github.com/Chuset21/Data-Structures-And-Algorithms/tree/main/src/com/chuset/data_structures/linked_lists)  
 [Queues](https://github.com/Chuset21/Data-Structures-And-Algorithms/tree/main/src/com/chuset/data_structures/queues)  
 [Stacks](https://github.com/Chuset21/Data-Structures-And-Algorithms/tree/main/src/com/chuset/data_structures/stacks)  
@@ -13,6 +13,8 @@
 [Recursion](https://github.com/Chuset21/Data-Structures-And-Algorithms/tree/main/src/com/chuset/algorithms/recursion)  
 [Sorting](https://github.com/Chuset21/Data-Structures-And-Algorithms/tree/main/src/com/chuset/algorithms/sorting)
 
+## Dynamic Programming
+[Dynamic fibonacci](https://github.com/Chuset21/Data-Structures-And-Algorithms/tree/main/src/com/chuset/dynamic_programming)
 
 ## Coding Problems
 [Common Items](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/CommonItems.java)  
@@ -21,3 +23,4 @@
 [Move Zeroes](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/MoveZeroes.java)  
 [Reverse String](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/ReverseString.java)  
 [Shift Array](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/ShiftArray.java)
+
