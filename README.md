@@ -19,6 +19,7 @@
 ## Coding Problems
 [Common Items](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/CommonItems.java)  
 [First Recurring Character](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/FirstRecurringCharacter.java)  
+[House Robber](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/HouseRobber.java)  
 [Merge Sorted Arrays](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/MergeSortedArrays.java)  
 [Move Zeroes](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/MoveZeroes.java)  
 [Reverse String](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/ReverseString.java)  
