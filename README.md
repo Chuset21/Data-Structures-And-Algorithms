@@ -18,6 +18,7 @@
 [Memoizer](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/dynamic_programming/Memoizer.java)
 
 ## Coding Problems
+[Climbing Stairs](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/ClimbingStairs.java)  
 [Common Items](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/CommonItems.java)  
 [First Recurring Character](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/FirstRecurringCharacter.java)  
 [House Robber](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/HouseRobber.java)  
