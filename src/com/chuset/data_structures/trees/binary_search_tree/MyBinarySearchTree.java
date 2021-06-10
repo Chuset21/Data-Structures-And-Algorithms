@@ -1,5 +1,10 @@
 package com.chuset.data_structures.trees.binary_search_tree;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
 public class MyBinarySearchTree<T extends Comparable<T>> {
 
     private MyBinaryNode<T> root;
@@ -151,8 +156,7 @@ public class MyBinarySearchTree<T extends Comparable<T>> {
     }
 
     private String toString(final MyBinaryNode<T> current, int tabCount) {
-        final StringBuilder sb = new StringBuilder();
-        sb.append(current.getValue()).append('\n');
+        final StringBuilder sb = new StringBuilder().append(current.getValue()).append('\n');
         tabCount++;
         if (current.getLeft() != null) {
             sb.append("\t".repeat(tabCount)).append("Left:  ").append(toString(current.getLeft(), tabCount));
@@ -161,6 +165,61 @@ public class MyBinarySearchTree<T extends Comparable<T>> {
             sb.append("\t".repeat(tabCount)).append("Right: ").append(toString(current.getRight(), tabCount));
         }
         return sb.toString();
+    }
+
+    enum SearchType {
+        IN_ORDER,
+        PRE_ORDER,
+        POST_ORDER
+    }
+
+    public List<T> depthFirstSearchInOder(final SearchType searchType) {
+        return depthFirstSearchInOder(root, new ArrayList<>(), searchType);
+    }
+
+    private List<T> depthFirstSearchInOder(
+            final MyBinaryNode<T> current, final List<T> list, final SearchType searchType) {
+        if (searchType == SearchType.PRE_ORDER) {
+            list.add(current.getValue());
+        }
+
+        if (current.hasLeft()) {
+            depthFirstSearchInOder(current.getLeft(), list, searchType);
+        }
+        if (searchType == SearchType.IN_ORDER) {
+            list.add(current.getValue());
+        }
+
+        if (current.hasRight()) {
+            depthFirstSearchInOder(current.getRight(), list, searchType);
+        }
+        if (searchType == SearchType.POST_ORDER) {
+            list.add(current.getValue());
+        }
+        return list;
+    }
+
+    public List<T> breadthFirstSearchRecursively() {
+        final Queue<MyBinaryNode<T>> queue = new LinkedList<>();
+        queue.add(root);
+        return breadthFirstSearchRecursively(queue, new ArrayList<>());
+    }
+
+    private List<T> breadthFirstSearchRecursively(final Queue<MyBinaryNode<T>> queue, final List<T> list) {
+        if (queue.isEmpty()) {
+            return list;
+        }
+        final MyBinaryNode<T> current = queue.poll();
+        list.add(current.getValue());
+
+        if (current.hasLeft()) {
+            queue.add(current.getLeft());
+        }
+        if (current.hasRight()) {
+            queue.add(current.getRight());
+        }
+
+        return breadthFirstSearchRecursively(queue, list);
     }
 
     public static void main(String[] args) {
@@ -191,5 +250,10 @@ public class MyBinarySearchTree<T extends Comparable<T>> {
 
         System.out.printf("Removing 9: %s%n", tree.remove(9));
         System.out.println(tree);
+
+        System.out.printf("Breath first search: %s%n", tree.breadthFirstSearchRecursively());
+        System.out.printf("Depth first search - in order: %s%n", tree.depthFirstSearchInOder(SearchType.IN_ORDER));
+        System.out.printf("Depth first search - pre order: %s%n", tree.depthFirstSearchInOder(SearchType.PRE_ORDER));
+        System.out.printf("Depth first search - post order: %s%n", tree.depthFirstSearchInOder(SearchType.POST_ORDER));
     }
 }
