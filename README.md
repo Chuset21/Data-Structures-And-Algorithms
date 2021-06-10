@@ -14,7 +14,8 @@
 [Sorting](https://github.com/Chuset21/Data-Structures-And-Algorithms/tree/main/src/com/chuset/algorithms/sorting)
 
 ## Dynamic Programming
-[Dynamic fibonacci](https://github.com/Chuset21/Data-Structures-And-Algorithms/tree/main/src/com/chuset/dynamic_programming)
+[Dynamic Fibonacci](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/dynamic_programming/DynamicFibonacci.java)  
+[Memoizer](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/dynamic_programming/Memoizer.java)
 
 ## Coding Problems
 [Common Items](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/CommonItems.java)  
