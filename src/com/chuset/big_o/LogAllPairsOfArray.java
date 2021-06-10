@@ -8,7 +8,7 @@ public class LogAllPairsOfArray {
         logAllPairsOfArray(BOXES);
     }
 
-    private static <T> void logAllPairsOfArray(T[] array) { // O(n^2) --> Quadratic Time
+    private static <T> void logAllPairsOfArray(final T[] array) { // O(n^2) --> Quadratic Time
         for (final T firstPair : array) {
             for (final T secondPair : array) {
                 System.out.printf("%s, %s%n", firstPair, secondPair);
