@@ -28,3 +28,7 @@
 [Reverse String](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/ReverseString.java)  
 [Shift Array](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/ShiftArray.java)
 
+## Interview Questions
+[Amazon](https://github.com/Chuset21/Data-Structures-And-Algorithms/tree/main/src/com/chuset/interview_questions/amazon)  
+[Facebook](https://github.com/Chuset21/Data-Structures-And-Algorithms/tree/main/src/com/chuset/interview_questions/facebook)  
+[Google](https://github.com/Chuset21/Data-Structures-And-Algorithms/tree/main/src/com/chuset/interview_questions/google)  
