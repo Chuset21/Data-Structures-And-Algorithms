@@ -27,4 +27,5 @@
 [Move Zeroes](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/MoveZeroes.java)  
 [Number of Islands](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/NumberOfIslands.java)  
 [Reverse String](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/ReverseString.java)  
-[Shift Array](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/ShiftArray.java)
+[Shift Array](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/ShiftArray.java)  
+[Valid Parentheses](https://github.com/Chuset21/Data-Structures-And-Algorithms/blob/main/src/com/chuset/coding_problems/ValidParentheses.java)
