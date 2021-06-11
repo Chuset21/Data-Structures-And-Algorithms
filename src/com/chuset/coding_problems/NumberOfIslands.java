@@ -1,4 +1,4 @@
-package com.chuset.interview_questions.facebook;
+package com.chuset.coding_problems;
 
 public class NumberOfIslands {
 
