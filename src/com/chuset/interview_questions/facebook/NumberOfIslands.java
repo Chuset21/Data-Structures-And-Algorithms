@@ -1,4 +1,4 @@
-package com.chuset.interview_questions.amazon;
+package com.chuset.interview_questions.facebook;
 
 public class NumberOfIslands {
 
